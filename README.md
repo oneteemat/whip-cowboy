@@ -6,7 +6,7 @@ A Chrome extension that drops a hand-drawn cowboy onto **Claude**, **ChatGPT** a
 
 Right-click him for chaos: a MEGA whip crack that shatters your screen, an airstrike, a horseback duel, a T-rex, a stampede and more.
 
-![The cowboy cracking his whip](docs/whip-crack.png)
+<p align="center"><img src="docs/demo.gif" width="640" alt="The cowboy whipping Claude while it writes"></p>
 
 ## Install (2 minutes)
 
@@ -32,12 +32,22 @@ Pin the 🤠 icon in the toolbar for the settings. Works in any Chromium browser
 - 🔊 **Sound effects** (off by default), all generated in code.
 - **Alt+W** cracks the whip by hand. **Drag** him anywhere.
 
-| | |
-|---|---|
-| ![Events](docs/events-1.png) | ![Reinforcements](docs/reinforcements.png) |
-| ![Cast](docs/cast.png) | ![T-rex](docs/trex.png) |
+## Screenshots
 
-<img src="docs/popup.png" width="260" alt="Settings popup">
+| | |
+|:---:|:---:|
+| ![Mega whip crack](docs/shot-mega.png) | ![World destroyer](docs/shot-destroyer.png) |
+| 💥 **MEGA ULTRA GIGA whip crack**: explosion and a cracked screen | ☠️ **World destroyer**: the whole screen shatters |
+| ![Reinforcements](docs/shot-reinforce.png) | ![Airstrike](docs/shot-airstrike.png) |
+| 📻 **Reinforcements**: the crew whips in sync | ✈️ **Airstrike**: a dive bomber hits the response |
+| ![Duel](docs/shot-duel.png) | ![Sunset](docs/shot-sunset.png) |
+| 🤠 **Duel** against the AI's own cowboy | 🌅 **Sunset**: rides off after a long task |
+| ![T-rex roar](docs/shot-jurassic.png) | ![T-rex chomp](docs/shot-trex-chomp.png) |
+| 🦖 **Jurassic whip**: the T-rex roars in his face… | …then eats your chat |
+
+<p align="center"><img src="docs/cast.png" width="640" alt="The cast"><br><em>The cast (dark humor mode)</em></p>
+
+<p align="center"><img src="docs/popup.png" width="260" alt="Settings popup"><br><em>Settings popup (click the 🤠 icon)</em></p>
 
 ## Privacy
 
