@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Whip Cowboy — playground</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 16px/1.6 Georgia, serif; background: #f5f4ee; color: #222; }
+    body.dark { background: #262624; color: #eee; }
+    .bar { position: fixed; top: 0; left: 0; right: 0; display: flex; gap: 8px; padding: 8px 12px; background: #e9e6dc; font: 13px system-ui; z-index: 5; flex-wrap: wrap; }
+    body.dark .bar { background: #1d1d1b; }
+    main { max-width: 720px; margin: 0 auto; padding: 70px 20px 200px; }
+    .user { background: #e8e4d8; padding: 10px 14px; border-radius: 12px; margin: 20px 0 20px auto; width: fit-content; }
+    body.dark .user { background: #3a3936; }
+    .composer { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); width: min(720px, 92vw); background: #fff; border: 1px solid #ccc; border-radius: 16px; padding: 10px; display: flex; gap: 8px; }
+    body.dark .composer { background: #30302e; border-color: #555; }
+    .composer textarea { flex: 1; border: 0; resize: none; font: inherit; background: transparent; color: inherit; outline: none; }
+    .composer button { border-radius: 10px; border: 0; background: #c96442; color: #fff; padding: 6px 12px; }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <button id="start">▶ Simulate streaming</button>
+    <button id="stop">■ Finish response</button>
+    <button id="long">▶ 30 s response</button>
+    <button id="dark">🌓 Dark</button>
+    <label><input type="checkbox" id="lang"> English</label>
+    <label><input type="checkbox" id="debug"> Debug</label>
+    <button id="reset">Reset position</button>
+    <button id="enable">Re-enable</button>
+    <select id="ev"><option value="">Event…</option><option>mega</option><option>destroyer</option><option>reinforce</option><option>airstrike</option><option>duel</option><option>jurassic</option><option>scene-horse</option><option>scene-stampede</option><option>scene-sunset</option></select>
+    <label><input type="checkbox" id="sound"> Sound</label>
+    <input id="name" placeholder="custom name" size="10">
+  </div>
+  <main id="chat">
+    <div class="user">Can you refactor my whole codebase please?</div>
+    <div class="font-claude-response" data-is-streaming="false">
+      <p>Sure! Let me take a look at the structure first. This page imitates claude.ai's markup closely enough for the detector: a <code>Stop response</code> button appears in the composer and the last message gets <code>data-is-streaming="true"</code> while "Claude" is typing.</p>
+    </div>
+  </main>
+  <div class="composer">
+    <textarea id="input" rows="2" placeholder="Reply to Claude…"></textarea>
+    <button id="send" aria-label="Send message">↑</button>
+  </div>
+
+  <script src="../core/util.js"></script>
+  <script src="../core/i18n.js"></script>
+  <script src="../core/sites.js"></script>
+  <script src="../core/config.js"></script>
+  <script src="../core/art.js"></script>
+  <script src="../core/crew.js"></script>
+  <script src="../core/figure.js"></script>
+  <script src="../core/creatures.js"></script>
+  <script src="../core/stage.js"></script>
+  <script src="../core/bubbles.js"></script>
+  <script src="../core/menu.js"></script>
+  <script src="../core/detector.js"></script>
+  <script src="../core/events.js"></script>
+  <script src="../core/sfx.js"></script>
+  <script src="../core/fx.js"></script>
+  <script src="../core/juice.js"></script>
+  <script src="../core/events/mega.js"></script>
+  <script src="../core/events/destroyer.js"></script>
+  <script src="../core/events/reinforce.js"></script>
+  <script src="../core/events/airstrike.js"></script>
+  <script src="../core/events/duel.js"></script>
+  <script src="../core/events/jurassic.js"></script>
+  <script src="../core/events/scenes.js"></script>
+  <script src="../core/app.js"></script>
+  <script src="playground.js"></script>
+</body>
+</html>

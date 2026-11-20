@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Whip Cowboy</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <svg class="logo" viewBox="-26 -30 52 34" aria-hidden="true">
+      <path fill="#8b5a2b" stroke="#151515" stroke-width="2.4" stroke-linejoin="round" d="M-9 -10 Q-10.5 -19 -7.5 -25 Q-3.5 -21.5 0 -22.5 Q3.5 -21.5 7.5 -25 Q10.5 -19 9 -10 Z"/>
+      <path fill="#4a2c12" stroke="#151515" stroke-width="2.4" stroke-linejoin="round" d="M-9.3 -14 L9.3 -14 L9.2 -10.5 L-9.2 -10.5 Z"/>
+      <path fill="#8b5a2b" stroke="#151515" stroke-width="2.4" stroke-linejoin="round" d="M-23 -16 Q-17 -8.5 0 -9.5 Q17 -8.5 23 -16 Q19 -5 0 -5.5 Q-19 -5 -23 -16 Z"/>
+    </svg>
+    <h1>Whip Cowboy</h1>
+    <label class="switch" title="On / Off">
+      <input type="checkbox" data-key="enabled">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <main>
+    <div class="row">
+      <span data-i18n="language"></span>
+      <select data-key="lang">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <label class="row"><span data-i18n="random"></span><input type="checkbox" data-key="randomEvents"></label>
+    <label class="row"><span data-i18n="bubbles"></span><input type="checkbox" data-key="bubbles"></label>
+    <label class="row"><span data-i18n="dark"></span><input type="checkbox" data-key="darkHumor"></label>
+    <label class="row"><span data-i18n="sound"></span><input type="checkbox" data-key="sound"></label>
+    <div class="row"><span data-i18n="volume"></span><input type="range" min="0" max="100" step="5" id="volume"></div>
+    <div class="row">
+      <span data-i18n="name"></span>
+      <select data-key="nameMode">
+        <option value="auto" data-i18n="nameAuto"></option>
+        <option value="custom" data-i18n="nameCustom"></option>
+        <option value="off" data-i18n="nameOff"></option>
+      </select>
+    </div>
+    <div class="row" id="customRow"><span></span><input type="text" maxlength="24" data-key="customName" id="customName"></div>
+    <div class="row sites">
+      <span data-i18n="sites"></span>
+      <span class="chips">
+        <label><input type="checkbox" data-site="claude"> Claude</label>
+        <label><input type="checkbox" data-site="chatgpt"> ChatGPT</label>
+        <label><input type="checkbox" data-site="gemini"> Gemini</label>
+      </span>
+    </div>
+    <label class="row"><span data-i18n="stayOnStage"></span><input type="checkbox" data-key="stayOnStage"></label>
+    <div class="row">
+      <span data-i18n="speed"></span>
+      <span class="stepper">
+        <button type="button" id="slower" aria-label="slower">−</button>
+        <output id="speed">1×</output>
+        <button type="button" id="faster" aria-label="faster">+</button>
+      </span>
+    </div>
+    <div class="row">
+      <span data-i18n="escalate"></span>
+      <input type="number" min="3" max="600" step="1" data-key="escalateAfter">
+    </div>
+    <label class="row"><span data-i18n="debug"></span><input type="checkbox" data-key="debug"></label>
+  </main>
+
+  <footer>
+    <button type="button" id="test" class="primary" data-i18n="test"></button>
+    <button type="button" id="resetPos" data-i18n="resetPos"></button>
+    <p id="status" role="status"></p>
+    <p class="hint" data-i18n="hint"></p>
+  </footer>
+
+  <script src="../core/util.js"></script>
+  <script src="../core/i18n.js"></script>
+  <script src="../core/sites.js"></script>
+  <script src="../core/config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
